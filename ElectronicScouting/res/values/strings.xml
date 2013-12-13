@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Electronic Scouting</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_information">InformationActivity</string>
+    <string name="title_activity_editor">Editor</string>
+    <string name="title_activity_match_chooser">MatchChooser</string>
+    <string name="title_activity_match_editor">MatchEditor</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="title_activity_fragment">FragmentActivity</string>
+
+</resources>

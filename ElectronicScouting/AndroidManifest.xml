@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.electronicscouting"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo" >
+        <activity
+            android:name="com.example.electronicscouting.LocalActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.electronicscouting.InformationActivity"
+            android:label="@string/title_activity_information" >
+        </activity>
+        <activity
+            android:name="com.example.electronicscouting.Editor"
+            android:label="@string/title_activity_editor"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.example.electronicscouting.MatchChooser"
+            android:label="@string/title_activity_match_chooser" >
+        </activity>
+        <activity
+            android:name="com.example.electronicscouting.MatchEditor"
+            android:label="@string/title_activity_match_editor" >
+        </activity>
+        <activity
+            android:name="com.example.electronicscouting.HomeScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.electronicscouting.FragmentActivity"
+            android:label="@string/title_activity_fragment" >
+        </activity>
+    </application>
+
+</manifest>
