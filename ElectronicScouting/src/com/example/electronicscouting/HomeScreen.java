@@ -28,6 +28,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.Toast;
  
 public class HomeScreen extends FragmentActivity {
@@ -54,6 +55,7 @@ public class HomeScreen extends FragmentActivity {
 			}
 	        setContentView(R.layout.activity_home_screen);
 	        final ActionBar bar = getActionBar();
+	       
 	        viewPager = (ViewPager) findViewById(R.id.pager);
 	        mAdapter = new TabsPageAdapter(getSupportFragmentManager());
 	        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -150,7 +152,7 @@ public void onStop() {
 	try {
 		ScoutSaver.saveData();
 	} catch (IOException e) {
-		Toast.makeText(this, "Failed Saving Data: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, "Failed Saving Data: " + e.getMessage(), Toast.LENGTH_LONG).show();
 		e.printStackTrace();
 	}
 	//Toast.makeText(this, "Stopped", Toast.LENGTH_SHORT).show();

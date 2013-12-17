@@ -29,9 +29,9 @@ public class ScoutSaver {
 			MatchOverviewInfo info = matchData.get(team);
 			int numMatches = info.numMatches;
 			out.writeInt(numMatches);
-			for (int x = 0; x < numMatches; x++) {
+			for (int x = 1; x <= numMatches; x++) {
 				MatchInfo match = teamData.get(new MatchInfoKey(team.toString(), x));
-				
+				match.writeToFile(out);
 				
 			}
 			
@@ -64,8 +64,14 @@ public class ScoutSaver {
 			Team team = new Team(in.readInt());
 			int numMatches = in.readInt();
 			teamData.put(team, new MatchOverviewInfo(numMatches));
-			for (int match = 0; match < numMatches; match++) {
-				matchData.put(new MatchInfoKey(team.toString(), match), new MatchInfo());
+			if (numMatches == 0) {
+				continue;
+			}
+			for (int match = 1; match <= numMatches; match++) {
+				MatchInfo matchInfo = new MatchInfo();
+				matchInfo.readFromFile(in);
+				matchData.put(new MatchInfoKey(team.toString(), match), matchInfo);
+				
 			}
 		}
 		in.close();

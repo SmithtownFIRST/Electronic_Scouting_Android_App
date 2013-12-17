@@ -39,8 +39,9 @@ public class LocalTeamChooserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 		home = HomeScreen.parent;
         root = inflater.inflate(R.layout.activity_main, container, false);
+        root.findViewById(R.id.autonomous).setVisibility(View.INVISIBLE);
         setupList();
-        Button button = (Button) root.findViewById(R.id.autonomous);
+        Button button = (Button) root.findViewById(R.id.button1);
         button.setOnClickListener(new OnClickListener() {
 
 			@Override

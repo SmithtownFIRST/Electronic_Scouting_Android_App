@@ -34,7 +34,8 @@ public class LocalMatchChooserFragment extends Fragment{
 		matchInfo = home.teamData.get(new Team(Integer.parseInt(team)));
 		
         root = inflater.inflate(R.layout.activity_match_chooser, container, false);
-        ((TextView)root.findViewById(R.id.textView1)).setText("Team " + team + "'s Matches");
+        
+        ((TextView) root.findViewById(R.id.textView1)).setText("Team " + team + "'s Matches");
         setupList();
         Button button = (Button) root.findViewById(R.id.autonomous);
         button.setOnClickListener(new OnClickListener() {
@@ -42,6 +43,7 @@ public class LocalMatchChooserFragment extends Fragment{
 			@Override
 			public void onClick(View arg0) {
 				addMatch(String.valueOf(++matchInfo.numMatches));
+				
 				home.matchData.put(new MatchInfoKey(team, matchInfo.numMatches), new MatchInfo());
 			}
         	

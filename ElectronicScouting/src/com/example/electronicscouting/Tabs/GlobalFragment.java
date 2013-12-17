@@ -16,9 +16,7 @@ public class GlobalFragment extends Fragment {
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 		home = HomeScreen.parent;
-		//home.setTitle("Global View");
         root = inflater.inflate(R.layout.fragment_global_list, container, false);
-		
 		return root;
 	}
 }

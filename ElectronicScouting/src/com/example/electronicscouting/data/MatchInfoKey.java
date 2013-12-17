@@ -21,5 +21,14 @@ private int match = 0;
 		return (key.team.equals(team) && key.match == match);
 	}
 	
+	@Override
+	public String toString() {
+		return "Team: " + team + " Match: " + match;
+	}
+	
+	@Override
+	public int hashCode() {
+		return team.hashCode() ^ match;
+	}
 
 }
